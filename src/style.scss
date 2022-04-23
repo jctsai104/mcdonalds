@@ -1,0 +1,44 @@
+body{
+    width: 100%;
+    margin: auto;
+    //  共用
+    .imgBox{
+        display: flex;
+        align-items: center;
+        vertical-align: top;
+        img{
+            width: 100%;
+        }
+    }
+    a{
+        text-decoration: none;
+    }
+    .container{
+        padding: 0 8.125%;
+    }
+
+    header{
+        
+        .underLineShadow{
+            box-shadow: 0 0 5px 1px #7171712b;
+        }
+        .navBarBox{
+            .topSearch{
+                .topSearchTxt{
+                    // display: flex;
+                    color: #292929;
+                }
+                span{
+                    color: red;
+                }
+            }
+        }
+    }
+    // header
+    main{
+        margin: auto;
+        section{
+        }
+    }
+    // main
+}

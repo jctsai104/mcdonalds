@@ -1,0 +1,44 @@
+body {
+  width: 100%;
+  margin: auto;
+}
+
+body .imgBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  vertical-align: top;
+}
+
+body .imgBox img {
+  width: 100%;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .container {
+  padding: 0 8.125%;
+}
+
+body header .underLineShadow {
+  -webkit-box-shadow: 0 0 5px 1px #7171712b;
+          box-shadow: 0 0 5px 1px #7171712b;
+}
+
+body header .navBarBox .topSearch .topSearchTxt {
+  color: #292929;
+}
+
+body header .navBarBox .topSearch span {
+  color: red;
+}
+
+body main {
+  margin: auto;
+}
+/*# sourceMappingURL=style.css.map */
