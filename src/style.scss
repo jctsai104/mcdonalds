@@ -1,7 +1,30 @@
+@mixin desktop {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin pad{
+    @media (min-width: 768px){
+      @content;
+    }
+}
+@mixin mobile{
+    @media (max-width: 767px){
+      @content;
+    }
+}
+@mixin footer {
+    @media (max-width: 991px) {
+        @content;
+    }
+}
 body{
     width: 100%;
     margin: auto;
     //  共用
+    // section{
+    //     margin-top: 50px;
+    // }
     .imgBox{
         display: flex;
         align-items: center;
@@ -10,15 +33,34 @@ body{
             width: 100%;
         }
     }
+    ul{
+        list-style: none;
+    }
     a{
         text-decoration: none;
+        color: #292929;
     }
     .container{
-        padding: 0 8.125%;
+        padding: 0 4.0625%;
+    }
+    #forMobile{
+        display: none;
+        @include footer{
+            display: block;
+        }
+    }
+    #forDesktop{
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 .5em;
+        @include footer{
+            display: none;
+
+        }
     }
 
     header{
-        
         .underLineShadow{
             box-shadow: 0 0 5px 1px #7171712b;
         }
@@ -35,10 +77,47 @@ body{
         }
     }
     // header
+
     main{
         margin: auto;
-        section{
+        .firstBanner{
+            .bannerBox{
+                @include pad{
+                    position: relative;
+
+                }
+                @include mobile{
+                    display: block;
+                }
+                .cardSide{
+                    @include pad{
+                        position: absolute;
+                        left: 50px;
+                        bottom: 50px;
+
+                    }
+                }
+            }
         }
     }
     // main
+
+    footer{
+        .webMap{
+            .webMapBox{
+                margin: 0 .5em;
+                .infoList{
+                    padding-left: 0;
+                    .infoListItem{
+                        padding: .2em 0;
+                        @include footer{
+                            padding: 1em 0;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
 }

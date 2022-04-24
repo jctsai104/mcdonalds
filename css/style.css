@@ -17,12 +17,44 @@ body .imgBox img {
   width: 100%;
 }
 
+body ul {
+  list-style: none;
+}
+
 body a {
   text-decoration: none;
+  color: #292929;
 }
 
 body .container {
-  padding: 0 8.125%;
+  padding: 0 4.0625%;
+}
+
+body #forMobile {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  body #forMobile {
+    display: block;
+  }
+}
+
+body #forDesktop {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 .5em;
+}
+
+@media (max-width: 991px) {
+  body #forDesktop {
+    display: none;
+  }
 }
 
 body header .underLineShadow {
@@ -40,5 +72,43 @@ body header .navBarBox .topSearch span {
 
 body main {
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  body main .firstBanner .bannerBox {
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  body main .firstBanner .bannerBox {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) {
+  body main .firstBanner .bannerBox .cardSide {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+  }
+}
+
+body footer .webMap .webMapBox {
+  margin: 0 .5em;
+}
+
+body footer .webMap .webMapBox .infoList {
+  padding-left: 0;
+}
+
+body footer .webMap .webMapBox .infoList .infoListItem {
+  padding: .2em 0;
+}
+
+@media (max-width: 991px) {
+  body footer .webMap .webMapBox .infoList .infoListItem {
+    padding: 1em 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

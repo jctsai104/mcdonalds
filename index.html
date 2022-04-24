@@ -17,16 +17,19 @@
             <nav class="navbar navbar-expand-lg navbar-light underLineShadow">
 
                 <div class="container">
-                    <!-- logo -->
-                    <a class="navbar-brand" href="#">
-                        <div class="imgBox">
-                            <img src="https://www.mcdonalds.com/etc/designs/mcd/tw/zh-tw/_jcr_content/logo/image.img.jpg/1649654364979.jpg" alt="麥當勞LOGO">
-                        </div>
-                    </a>
-                    <!-- moblie的漢堡 -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <!-- 手機版排列 -->
+                    <div class="moblieNav">
+                        <!-- logo -->
+                        <a class="navbar-brand" href="#">
+                            <div class="imgBox">
+                                <img src="https://www.mcdonalds.com/etc/designs/mcd/tw/zh-tw/_jcr_content/logo/image.img.jpg/1649654364979.jpg" alt="麥當勞LOGO">
+                            </div>
+                        </a>
+                        <!-- moblie的漢堡 -->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
                     <!-- 選單 -->
                     <div class="navBarBox">
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -57,7 +60,7 @@
                                 <li>
                                     <!-- 站內搜尋 -->
                                     <div class="topSearch d-flex flex-row align-items-center">
-                                        <div class="inside d-flex flex-row align-items-center">
+                                        <div class="inside">
                                             <a href="#">
                                                 <i class="fa-solid fa-magnifying-glass topSearchTxt"></i>
                                                 <span class="topSearchTxt">站內搜尋</span>
@@ -81,33 +84,33 @@
         </header>
         <main>
             <!-- 第一屏banner -->
-            <section class="firstBanner">
+            <section class="firstBanner mt-5">
                 <div class="container">
-                    <div class="imgBox">
-                        <img src="https://www.mcdonalds.com/is/image/content/dam/tw/carousel/desktop/210519/PCSafety.jpg?$Hero_Desktop$">  
-                    </div>
-                    <!-- 重點活動卡片 -->
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="btn btn-warning">
-                            了解更多
-                        </a>
-                        </div>
+                    <div class="bannerBox">
+                        <img src="https://www.mcdonalds.com/is/image/content/dam/tw/carousel/desktop/210519/PCSafety.jpg?$Hero_Desktop$" class="img-fluid"> 
+                        <!-- 重點活動卡片 -->
+                        <div class="card col-md-4 cardSide">
+                            <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-warning">
+                                了解更多
+                            </a>
+                            </div>
+                        </div> 
                     </div>
                 </div>
                 
             </section>
 
             <!-- 優惠活動卡片 -->
-            <section class="planCards">
+            <section class="planCards mt-5">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12 col-md-6" 
                         v-for="card in cards"
                         :key="card.id">
-                            <div class="card" >
+                            <div class="card mb-5">
                                 <img :src="card.img" class="card-img-top" alt="活動圖片">
                                 <div class="card-body">
                                 <h5 class="card-title">{{ card.title }}</h5>
@@ -127,7 +130,184 @@
         </main>
 
         <footer>
-
+            <section class="webMap mt-5">
+                <div class="container">
+                    <div class="webMapBox" id="forDesktop">
+                        <div class="about">
+                            <a href="#">
+                                <p>關於我們</p>
+                            </a>
+                            <ul class="infoList">
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        品牌故事與承諾
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        新聞室
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        麥當勞季報
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="career">
+                            <a href="#">
+                                <p>成為麥胞</p>
+                            </a>
+                            <ul class="infoList">
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        職涯發展
+                                    </li>
+                                </a>
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        加入我們
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="contact">
+                            <a href="#">
+                                <p>聯絡我們</p>
+                            </a>
+                            <ul class="infoList">
+                                <a href="#">
+                                    <li class="infoListItem">
+                                        常見問題
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                        <div class="charity">
+                            <a href="#">
+                                <p>麥當勞叔叔之家慈善基金會</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="webMapBox" id="forMobile">
+                        <div class="about">
+                            <div class="infoBtn d-flex justify-content-between align-items-center">
+                                <p>關於我們</p>
+                                <!-- 下拉式的按鈕 -->
+                                <p>
+                                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAbout" aria-expanded="false" aria-controls="collapseAbout">
+                                        <i class="fa-thin fa-plus" style="font-size: 2em;"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- 下拉式的內容 -->
+                            <div class="collapse" id="collapseAbout">
+                                <ul class="infoList">
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            關於我們
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            品牌故事與承諾
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            新聞室
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            麥當勞季報
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="career">
+                            <div class="infoBtn d-flex justify-content-between align-items-center">
+                                <p>成為麥胞</p>
+                                <!-- 下拉式的按鈕 -->
+                                <p>
+                                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCareer" aria-expanded="false" aria-controls="collapseCareer">
+                                        <i class="fa-thin fa-plus" style="font-size: 2em;"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- 下拉式的內容 -->
+                            <div class="collapse" id="collapseCareer">
+                                <ul class="infoList">
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            成為麥胞
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            職涯發展
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            加入我們
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="infoBtn d-flex justify-content-between align-items-center">
+                                <p>聯絡我們</p>
+                                <!-- 下拉式的按鈕 -->
+                                <p>
+                                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseContact" aria-expanded="false" aria-controls="collapseContact">
+                                        <i class="fa-thin fa-plus" style="font-size: 2em;"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- 下拉式的內容 -->
+                            <div class="collapse" id="collapseContact">
+                                <ul class="infoList">
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            聯絡我們
+                                        </li>
+                                    </a>
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            常見問題
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="charity">
+                            <div class="infoBtn d-flex justify-content-between align-items-center">
+                                <p>麥當勞叔叔之家慈善基金會</p>
+                                <!-- 下拉式的按鈕 -->
+                                <p>
+                                    <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCharity" aria-expanded="false" aria-controls="collapseCharity">
+                                        <i class="fa-thin fa-plus" style="font-size: 2em;"></i>
+                                    </button>
+                                </p>
+                            </div>
+                            <!-- 下拉式的內容 -->
+                            <div class="collapse" id="collapseCharity">
+                                <ul class="infoList">
+                                    <a href="#">
+                                        <li class="infoListItem">
+                                            麥當勞叔叔之家慈善基金會
+                                        </li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </footer>
     <!-- vue的實體 -->
     </div>
