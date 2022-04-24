@@ -1,0 +1,16 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "img": "https://www.mcdonalds.com/is/image/content/dam/tw/featured-callout/desktop/zh-tw/what-hot-PC.jpg?$FC_One_By_Two$",
+            "title": "現正推出",
+            "content": "想了解麥當勞有哪些最新活動嗎？你不想錯過的美食、最即時的優惠內容... 馬上探索、馬上行動！"
+        },
+        {
+            "id": 2,
+            "img": "https://www.mcdonalds.com/is/image/content/dam/tw/featured-callout/desktop/zh-tw/mcd-home-mds-pc.jpg?$FC_One_By_Two$",
+            "title": "24hr歡樂送",
+            "content": "不想出門？還是不方便出門？麥當勞歡樂送APP提供24小時點餐服務，讓你想吃就點，歡樂不間斷"
+        }
+    ]
+}
