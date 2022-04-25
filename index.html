@@ -145,20 +145,43 @@
             <!-- 第一屏banner -->
             <section class="firstBanner mt-5">
                 <div class="minContainer">
-                    <div class="bannerBox">
-                        <div class="imgBox">
-                            <img src="https://www.mcdonalds.com/is/image/content/dam/tw/carousel/desktop/210519/PCSafety.jpg?$Hero_Desktop$"> 
-                        </div>
-                        <!-- 重點活動卡片 -->
-                        <div class="card col-md-4">
-                            <div class="card-body">
-                            <h3 class="card-title">麥當勞餐廳相關公告</h3>
-                            <p class="card-text">即日起， 進入麥當勞餐廳前請配戴口罩、測量額溫與實聯制登記。</p>
-                            <a href="#" class="btn btn-warning">
-                                了解更多
-                            </a>
+                    <div id="carouselFirstBanner" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="6000" data-bs-pause="true">
+                                <img src="https://www.mcdonalds.com/is/image/content/dam/tw/carousel/desktop/210519/PCSafety.jpg?$Hero_Desktop$" class="d-block w-100 bannerBox" alt="...">
+                                <!-- 重點活動卡片 -->
+                                <div class="card col-md-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">麥當勞餐廳相關公告</h3>
+                                        <p class="card-text">即日起， 進入麥當勞餐廳前請配戴口罩、測量額溫與實聯制登記。</p>
+                                        <a href="#" class="btn btn-warning">
+                                            了解更多
+                                        </a>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselFirstBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselFirstBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                </div> 
                             </div>
-                        </div> 
+                            <div class="carousel-item" data-bs-interval="6000" data-bs-pause="true">
+                                <img src="https://www.mcdonalds.com/is/image/content/dam/tw/carousel/desktop/2022/0420/mfckorean-carousel-pc-1260x560.jpg?$Hero_Desktop$" class="d-block w-100 bannerBox" alt="...">
+                                <!-- 重點活動卡片 -->
+                                <div class="card col-md-4">
+                                    <div class="card-body">
+                                        <h3 class="card-title">【韓風炸鷄腿】韓國直送 熱銷推薦</h3>
+                                        <p class="card-text">去年錯過？沒關係他又回來了！韓國直送不倒翁甜辣醬，甜辣完美比例，配上多汁鷄腿，想吃就點韓風炸鷄腿</p>
+                                        <a href="#" class="btn btn-warning">
+                                            了解更多
+                                        </a>
+                                    </div>
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselFirstBanner" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselFirstBanner" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>                        
                     </div>
                 </div>
                 

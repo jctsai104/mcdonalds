@@ -152,6 +152,8 @@ body main .firstBanner .bannerBox {
 @media (min-width: 768px) {
   body main .firstBanner .bannerBox {
     position: relative;
+    margin: auto;
+    z-index: 0;
   }
 }
 
@@ -162,12 +164,55 @@ body main .firstBanner .bannerBox {
 }
 
 @media (min-width: 768px) {
-  body main .firstBanner .bannerBox .card {
+  body main .firstBanner .card {
     position: absolute;
-    left: 5%;
-    bottom: 10%;
-    padding: 3em;
+    left: 50px;
+    bottom: 50px;
+    padding: 1.5em 1.5em 4.5em 1.5em;
+    z-index: 1;
+    width: 420px;
   }
+  body main .firstBanner .card .btn {
+    margin-top: 1em;
+    padding: 1em 2.5em;
+  }
+}
+
+body main .firstBanner .carousel-indicators {
+  position: absolute;
+  right: 60%;
+  bottom: 10%;
+  left: 0;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  list-style: none;
+}
+
+body main .firstBanner .carousel-indicators [data-bs-target] {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  margin: 0 1em;
+  cursor: pointer;
+  background-color: #000;
+  opacity: .5;
+  -webkit-transition: opacity .6s ease;
+  transition: opacity .6s ease;
+  z-index: 2;
 }
 
 @media (max-width: 991px) {
@@ -208,17 +253,19 @@ body footer .webMap .webMapBox .mapBox {
   margin-left: 1em;
 }
 
-body footer .webMap .webMapBox .mapBox .infoList {
+body footer .webMap .webMapBox .infoList {
   padding-left: 0;
 }
 
-body footer .webMap .webMapBox .mapBox .infoList .infoListItem {
+body footer .webMap .webMapBox .infoList .infoListItem {
   padding: .2em 0;
 }
 
 @media (max-width: 991px) {
-  body footer .webMap .webMapBox .mapBox .infoList .infoListItem {
+  body footer .webMap .webMapBox .infoList .infoListItem {
     padding: 1em 0;
+    font-size: .9em;
+    color: #292929;
   }
 }
 
